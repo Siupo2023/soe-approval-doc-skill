@@ -49,7 +49,7 @@ description: 集团内部呈批件助手（国企版）- 专业的国有企业�
 
 ### 动态参考资料系统
 
-**主参考资料目录**：`~/.claude/skills/soe-approval-doc/references/`
+**主参考资料目录**：`<skill_path>/references/`
 
 #### 1. 文档模板 (`references/templates/`)
 - `template-standard.md` - 标准请示模板
@@ -91,7 +91,7 @@ description: 集团内部呈批件助手（国企版）- 专业的国有企业�
 
 ### 自动化脚本
 
-**生成脚本位置**：`~/.claude/skills/soe-approval-doc/scripts/generate_approval_doc.py`
+**生成脚本位置**：`<skill_path>/scripts/generate_approval_doc.py`
 
 **功能**：
 - ✅ 自动应用国企公文格式规范
@@ -104,7 +104,7 @@ description: 集团内部呈批件助手（国企版）- 专业的国有企业�
 **使用方式**：
 ```bash
 # 命令行直接生成（带示例内容）
-python3 ~/.claude/skills/soe-approval-doc/scripts/generate_approval_doc.py output.docx
+python3 <skill_path>/scripts/generate_approval_doc.py output.docx
 
 # 或在 Claude 中调用函数生成（推荐）
 ```
@@ -354,16 +354,16 @@ grep -r "关键词1\|关键词2" ~/llm-wiki/wiki/ --include="*.md" -l 2>/dev/nul
 
 ```bash
 # 查看所有模板
-ls ~/.claude/skills/soe-approval-doc/references/templates/
+ls <skill_path>/references/templates/
 
 # 查看成功案例
-ls ~/.claude/skills/soe-approval-doc/references/examples/
+ls <skill_path>/references/examples/
 
 # 搜索历史案例中的关键词
-grep -r "关键词" ~/.claude/skills/soe-approval-doc/references/examples/ --include="*.md" -C 3 -i
+grep -r "关键词" <skill_path>/references/examples/ --include="*.md" -C 3 -i
 
 # 查看行文风格指南
-cat ~/.claude/skills/soe-approval-doc/references/style-guide.md
+cat <skill_path>/references/style-guide.md
 ```
 
 ---
@@ -517,13 +517,13 @@ Q12: 下一步有什么计划？
 
 ```bash
 # 查看工作总结文档类型说明
-cat ~/.claude/skills/soe-approval-doc/references/doc-types/work-summary.md
+cat <skill_path>/references/doc-types/work-summary.md
 
 # 查看工作总结模板
-cat ~/.claude/skills/soe-approval-doc/references/templates/template-summary.md
+cat <skill_path>/references/templates/template-summary.md
 
 # 查看工作总结案例
-ls ~/.claude/skills/soe-approval-doc/references/examples/summary/
+ls <skill_path>/references/examples/summary/
 ```
 
 ---
